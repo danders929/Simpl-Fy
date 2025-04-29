@@ -1,17 +1,11 @@
-import './App.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import logo from '../public/assets/logo_transparent.png'
+import Header from "./components/Header"
 function App() {
   return (
     <>
       <Header />
-
       <main>
+        <p>Welcome to the main content area!</p>
       </main>
-
-      <Footer />
-      
     </>
   )
 }
