@@ -1,19 +1,4 @@
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #2354C2;
-    padding: 1rem 2rem;
-    color: white;
+/* App.css */
+main {
+  padding-top: 60px;
 }
-
-body {
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #f0f2f5;
-  }
-  
-h1 {
-    text-align: center;
-    margin-top: 3rem;
-  }
