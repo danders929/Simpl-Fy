@@ -89,6 +89,7 @@
 @media (max-width: 768px) {
     .menu-toggle {
       display: block;
+      padding-right: 20px;
     }
 
     .header-nav {
