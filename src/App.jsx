@@ -1,17 +1,14 @@
-import Header from "./components/Header"
+import Header from './components/Header'
+import { Outlet } from 'react-router-dom'
+import "./App.css"
+
 function App() {
   return (
     <>
-      <div className="header-container">
       <Header />
-      </div>
-      <div className="content">
-        <h1>Welcome to Simpl-Fy</h1>
-        <p>Your one-stop solution for all your needs.</p>
-        <p>Explore our services and find out how we can help you.</p>
-        <p>Contact us for more information.</p>
-      </div>
-
+      <main>
+        <Outlet />
+      </main>
     </>
   )
 }
