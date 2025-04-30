@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <header className="header">
             <div className="header-container">
-                <img src={logo} alt="Logo" />
+                <p className="header-logo"><a href="#home"> Simpl-Fy</a></p>
                 <nav className="header-nav">
                     <ul>
                         <li><a href="#home">Home</a></li>
