@@ -1,42 +1,46 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import './Header.css';
 
 export default function Header() {
-    const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    return (
-        <header className="header">
-            <div className="header-container">
-                <p className="header-logo"><a href="#home">Simpl-Fy</a></p>
+  return (
+    <header className="header">
+      <div className="header-container">
+        {/* Logo */}
+        <p className="header-logo">
+          <Link to="/" onClick={() => setMenuOpen(false)}>Simpl-Fy</Link>
+        </p>
 
-                {/* Hamburger Icon */}
-                <button
-                    className="menu-toggle"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    aria-label="Toggle navigation menu"
-                >
-                    ☰
-                </button>
+        {/* Hamburger Icon */}
+        <button
+          className="menu-toggle"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          ☰
+        </button>
 
-                {/* Navigation */}
-                <nav className={`header-nav ${menuOpen ? 'open-fullscreen' : ''}`}>
-                    {/* Close "X" Button */}
-                    <button 
-                        className="menu-close" 
-                        onClick={() => setMenuOpen(false)}
-                        aria-label="Close navigation menu"
-                    >
-                        ✕
-                    </button>
+        {/* Navigation */}
+        <nav className={`header-nav ${menuOpen ? 'open-fullscreen' : ''}`}>
+          {/* Close "X" Button */}
+          <button 
+            className="menu-close" 
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close navigation menu"
+          >
+            ✕
+          </button>
 
-                    <ul>
-                        <li><a href="#home" onClick={() => setMenuOpen(false)}>Home</a></li>
-                        <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
-                        <li><a href="#services" onClick={() => setMenuOpen(false)}>Services</a></li>
-                        <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    );
+          <ul>
+            <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+            <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
+            <li><Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link></li>
+            <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  );
 }
