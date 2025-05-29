@@ -4,7 +4,8 @@ function About() {
   return (
     <div className="content">
       <h1>About Simpl-Fy</h1>
-      <p>Simpl-Fy is dedicated to delivering simple, effective IT solutions tailored to your needs.</p>
+      <p>Simpl-Fy is dedicated to delivering simple, effective IT solutions tailored to your needs. </p>
+      <p>Our mission is to simplify your IT processes, making technology work for you.</p>
       <p>We help streamline your technical operations so you can focus on what matters most.</p>
     </div>
   )

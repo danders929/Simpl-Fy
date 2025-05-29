@@ -7,8 +7,8 @@ function Services() {
       <ul>
         <li>Managed IT Support</li>
         <li>System Administration</li>
-        <li>Web Development & Deployment</li>
         <li>Technical Consulting</li>
+        <li>Data Systems Integration for Airborne ISR Platforms</li>
       </ul>
     </div>
   )
