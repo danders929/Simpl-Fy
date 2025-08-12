@@ -1,14 +1,27 @@
-import React from 'react'
 
-function About() {
+// About section
+export default function About() {
   return (
-    <div className="content">
-      <h1>About Simpl-Fy</h1>
-      <p>Simpl-Fy is dedicated to delivering simple, effective IT solutions tailored to your needs. </p>
-      <p>Our mission is to simplify your IT processes, making technology work for you.</p>
-      <p>We help streamline your technical operations so you can focus on what matters most.</p>
-    </div>
-  )
+    <section id="about" className="section">
+      <div className="container about">
+        {/*Mission and Vision*/}
+        <div>
+          <h2>Our mission & vision</h2>
+          <p className="kicker">Formal, technical, and focused on outcomes.</p>
+          <p><strong>Vision:</strong> Trusted partner for C5ISR & IT solutions that support critical missions and scalable growth.</p>
+          <p><strong>Mission:</strong> Deliver modular, secure, mission-ready systems with seamless integration, expert support, and field-proven performance.</p>
+          <div className="pill">Core values: Simplicity • Technical Expertise • Innovation & Modularity • Mission Ready • Integrity & Reliability</div>
+        </div>
+        {/*Who We Serve*/}
+        <div>
+          <h2>Who we serve</h2>
+          <p>ISR small businesses, defense contractors reducing overhead, and government agencies seeking reliable delivery.</p>
+          <ul>
+            <li>Positioning: cost-effective, modular, turn-key.</li>
+            <li>Tone: formal & technical.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
 }
-
-export default About

@@ -1,0 +1,103 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: saturate(140%) blur(10px);
+  background: linear-gradient(180deg, rgba(15, 23, 42, .85), rgba(15, 23, 42, .6));
+  border-bottom: 1px solid rgba(255, 255, 255, .06)
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin-inline: auto
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  letter-spacing: .2px
+}
+
+.brand img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #000
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-weight: 600;
+  color: var(--muted)
+}
+
+.nav-links a:hover {
+  color: var(--white)
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: .2s ease
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--deep-blue-2), var(--sky));
+  color: #0b1020;
+  border: none;
+  /* remove possible 1px border */
+  padding: 0.6em 1.4em;
+  /* ensure balanced vertical/horizontal padding */
+  border-radius: 999px;
+  /* fully pill shape */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  /* avoid vertical misalignment */
+  box-sizing: border-box;
+  background-clip: padding-box;
+  /* ensures gradient covers inside of border */
+  box-shadow: 0 0 0 1px var(--deep-blue-2) inset;
+  /* covers subpixel gap */
+}
+
+.btn.primary:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  color: azure
+}
+
+.btn.ghost {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, .14);
+  background: rgba(255, 255, 255, .04)
+}
+
+.btn.ghost:hover {
+  background: rgba(255, 255, 255, .1)
+}
+
+@media (max-width:560px) {
+  .nav-links {
+    display: none
+  }
+}
