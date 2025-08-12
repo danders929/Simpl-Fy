@@ -57,7 +57,7 @@ Simpl-Fy/
 │   │   └── Header.css
 │   ├── App.jsx
 │   ├── App.css
-│   ├── index.js
+│   ├── index.jsx
 │   └── ... (other source files)
 ├── package.json
 ├── README.md
@@ -70,7 +70,7 @@ Simpl-Fy/
         * `Header.css`: Styles for the `Header` component.
     * `App.jsx`: The root component of the application.
     * `App.css`: Global styles for the `App` component.
-    * `index.js`: The entry point for the React application.
+    * `index.jsx`: The entry point for the React application.
 * `package.json`: Contains project metadata and dependencies.
 * `README.md`: This file, providing information about the project.
 
