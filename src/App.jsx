@@ -171,7 +171,7 @@ function Contact() {
             <textarea id="message" rows="5" placeholder="Tell us about your mission…"></textarea>
           </div>
           <div style={{marginTop:"14px",display:"flex",justifyContent:"flex-end"}}>
-            <button className="btn primary" type="submit">Send message</button>
+            <button className="btn primary" type="submit">Submit</button>
           </div>
         </form>
       </div>
