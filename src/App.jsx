@@ -113,7 +113,7 @@ function About() {
           <p>ISR small businesses, defense contractors reducing overhead, and government agencies seeking reliable delivery.</p>
           <ul>
             <li>Positioning: cost-effective, modular, turn-key.</li>
-            <li>Tone: formal & technical.</li>
+            
           </ul>
         </div>
       </div>
