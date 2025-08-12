@@ -5,7 +5,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container nav">
         <a className="brand" href="#top" aria-label="Simpl-FY home">
-          <img src="./public/assets/Simplogov1.png" alt="Simpl-FY logo" />
+          <img src="/assets/simpLogoV1.png" alt="Simpl-FY logo" />
           <span>Simpl-FY</span>
         </a>
         <nav className="nav-links">
