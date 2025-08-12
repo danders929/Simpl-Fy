@@ -9,8 +9,27 @@
 .nav-links a:hover{color:var(--white)}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;
   font-weight:700;border:1px solid transparent;transition:.2s ease}
-.btn.primary{background:linear-gradient(135deg,var(--deep-blue-2),var(--sky));color:#0b1020}
-.btn.primary:hover{filter:brightness(1.05);transform:translateY(-1px)}
+.btn.primary {
+  background: linear-gradient(135deg, var(--deep-blue-2), var(--sky));
+  color: #0b1020;
+  border: none; /* remove possible 1px border */
+  padding: 0.6em 1.4em; /* ensure balanced vertical/horizontal padding */
+  border-radius: 999px; /* fully pill shape */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1; /* avoid vertical misalignment */
+  box-sizing: border-box;
+  background-clip: padding-box; /* ensures gradient covers inside of border */
+  box-shadow: 0 0 0 1px var(--deep-blue-2) inset; /* covers subpixel gap */
+}
+
+.btn.primary:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  color:azure
+}
+
 .btn.ghost{color:var(--white);border-color:rgba(255,255,255,.14);background:rgba(255,255,255,.04)}
 .btn.ghost:hover{background:rgba(255,255,255,.1)}
 @media (max-width:560px){.nav-links{display:none}}
