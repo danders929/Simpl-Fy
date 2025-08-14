@@ -286,3 +286,80 @@ footer {
     grid-template-columns: 1fr
   }
 }
+/* === Contact (polished card layout) === */
+.contact-card{
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: calc(var(--radius) + 4px);
+  box-shadow: var(--shadow-lg);
+  padding: clamp(18px, 3vw, 28px);
+}
+
+.contact-card .grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.field{ 
+  display: flex; 
+  flex-direction: column; 
+  gap: 8px; 
+}
+
+.field label{
+  font-weight: 700;
+  color: var(--white);
+}
+
+.field input,
+.field textarea{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.05);
+  color: var(--text);
+  outline: none;
+  font: inherit;
+  backdrop-filter: blur(2px);
+  transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.field input::placeholder,
+.field textarea::placeholder{
+  color: rgba(230,233,238,.7);
+}
+
+.field input:hover,
+.field textarea:hover{
+  border-color: rgba(255,255,255,.22);
+}
+
+.field input:focus,
+.field textarea:focus{
+  border-color: var(--deep-blue-2);
+  box-shadow: 0 0 0 3px rgba(47,60,245,.25);
+  background: rgba(255,255,255,.06);
+}
+
+.field textarea{
+  min-height: 120px;
+  resize: vertical;
+}
+
+.actions{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+/* Error text (used by your JSX) */
+.error{
+  color: #ff6b6b; /* slightly brighter for dark bg */
+}
+
+/* Stack fields on smaller screens */
+@media (max-width: 720px){
+  .contact-card .grid{ grid-template-columns: 1fr; }
+}
