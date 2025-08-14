@@ -7,7 +7,7 @@ import About from "./features/main/About.jsx";
 import Services from "./features/main/Services.jsx";
 import Contact from "./features/main/Contact.jsx";
 import Footer from "./features/components/Footer.jsx";
-
+// Main App Component
 export default function App() {
   return (
     <>
