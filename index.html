@@ -10,6 +10,12 @@
   </head>
   <body>
     <div id="root"></div>
+    <!--hidden form for netlify to detect spam submissions and trigger email submission in build time-->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
     <script type="module" src="/src/index.jsx"></script>
   </body>
 </html>

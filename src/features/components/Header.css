@@ -1,0 +1,225 @@
+/* ===========================================
+   Header / Navbar styles
+   (selectors & properties sorted A→Z)
+   =========================================== */
+
+/* Brand: wraps logo + wordmark, aligns them in a row */
+.brand {
+  align-items: center;
+  display: flex;
+  font-weight: 800;
+  gap: 12px;
+  letter-spacing: 0.2px;
+}
+
+/* Brand image: size, crop behavior, and rounding */
+.brand img {
+  background: #000;
+  border-radius: 8px;
+  height: 34px;
+  object-fit: contain;
+  width: 34px;
+}
+
+/* Button (base): pill layout + shared spacing/transition */
+.btn {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  display: inline-flex;
+  font-weight: 700;
+  gap: 8px;
+  padding: 10px 16px;
+  transition: 0.2s ease;
+}
+
+/* Button (ghost): subtle outline; brighter on hover */
+.btn.ghost {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: var(--white);
+}
+
+/* Button (ghost:hover): stronger background on hover */
+.btn.ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Button (primary): gradient pill; inner 1px inset to avoid subpixel gap */
+.btn.primary {
+  align-items: center;
+  background: linear-gradient(135deg, var(--deep-blue-2), var(--sky));
+  background-clip: padding-box;
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px var(--deep-blue-2) inset;
+  box-sizing: border-box;
+  color: #0b1020;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 1;
+  padding: 0.6em 1.4em;
+}
+
+/* Button (primary:hover): subtle lift + slight brighten */
+.btn.primary:hover {
+  color: azure;
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+/* Layout container: centers content and constrains width */
+.container {
+  margin-inline: auto;
+  width: min(1120px, 92%);
+}
+
+/* Hamburger button: 3-bar icon; hidden on desktop (shown via media query) */
+.hamburger {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;          /* shown at mobile breakpoint */
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  padding: 0;
+  width: 24px;
+  z-index: 60;            /* above header so it remains clickable */
+}
+
+/* Hamburger bars: animated lines that morph into an "X" */
+.hamburger .bar {
+  background-color: var(--white);
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+/* Hamburger (open): top bar rotates into X */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(1px, 12px);
+}
+
+/* Hamburger (open): middle bar slides out + fades */
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+/* Hamburger (open): bottom bar rotates into X */
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(0.2px, -12px);
+}
+
+/* Mobile overlay: full-screen slide-in menu (right-aligned), white text */
+.mobile-nav-links {
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.98); /* full-screen overlay color */
+  color: #fff;                         /* default text color for overlay */
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 600;
+  gap: 16px;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  right: 0;        /* anchored to the right */
+  top: 0;
+  transform: translateX(100%);           /* start off-screen to the right */
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  z-index: 55;                            /* above header, below hamburger */
+}
+
+/* Mobile overlay (links): big tappable buttons */
+.mobile-nav-links a {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;                /* ensure link text is white */
+  display: block;
+  max-width: 300px;
+  padding: 18px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: 90%;
+}
+
+/* Mobile overlay (links:hover): subtle lift */
+.mobile-nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Mobile overlay (buttons inside menu): larger pills */
+.mobile-nav-links .btn.ghost {
+  border-radius: 999px;
+  max-width: none;
+  padding: 14px 24px;
+  width: auto;
+}
+
+.mobile-nav-links .btn.primary {
+  border-radius: 999px;
+  max-width: none;
+  padding: 14px 24px;
+  width: auto;
+}
+
+/* Mobile overlay (open): slide into view */
+.mobile-nav-links.open {
+  transform: translateX(0);
+}
+
+/* Header row: brand + nav aligned horizontally with spacing */
+.nav {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+/* Navbar links (desktop): inline list with spacing + muted color */
+.nav-links {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  font-weight: 600;
+  gap: 24px;
+}
+
+/* Navbar links (desktop:hover): brighten on hover */
+.nav-links a:hover {
+  color: var(--white);
+}
+
+/* Site header shell: sticky, translucent gradient, subtle bottom border */
+.site-header {
+  backdrop-filter: saturate(140%) blur(10px);
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.6));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* ===========================================
+   Responsive
+   =========================================== */
+
+/* Mobile breakpoint: hide desktop links; show hamburger button */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
