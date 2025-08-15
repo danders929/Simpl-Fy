@@ -11,7 +11,7 @@ export default function About() {
             <h2>Our mission & vision</h2>
             <p>We are the trusted partner for C5ISR and IT solutions that empower critical missions and enable scalable growth. We deliver modular, secure, mission-ready systems with seamless integration, expert support, and proven performance — ensuring our partners succeed with confidence and efficiency.</p>
             <div className="pill-group">
-              <span className="pill-item"Innovation</span>
+              <span className="pill-item">Innovation</span>
               <span className="pill-item">Modularity</span>
               <span className="pill-item">Reliability</span>
             </div>
