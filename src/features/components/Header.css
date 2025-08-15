@@ -79,13 +79,15 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  display: none;          /* shown at mobile breakpoint */
+  display: none;
+  /* shown at mobile breakpoint */
   flex-direction: column;
   height: 20px;
   justify-content: space-between;
   padding: 0;
   width: 24px;
-  z-index: 60;            /* above header so it remains clickable */
+  z-index: 60;
+  /* above header so it remains clickable */
 }
 
 /* Hamburger bars: animated lines that morph into an "X" */
@@ -116,8 +118,10 @@
 .mobile-nav-links {
   align-items: center;
   backdrop-filter: blur(10px);
-  background: rgba(15, 23, 42, 0.98); /* full-screen overlay color */
-  color: #fff;                         /* default text color for overlay */
+  background: rgba(15, 23, 42, 0.98);
+  /* full-screen overlay color */
+  color: #fff;
+  /* default text color for overlay */
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
@@ -126,12 +130,15 @@
   height: 100vh;
   justify-content: center;
   position: fixed;
-  right: 0;        /* anchored to the right */
+  right: 0;
+  /* anchored to the right */
   top: 0;
-  transform: translateX(100%);           /* start off-screen to the right */
+  transform: translateX(100%);
+  /* start off-screen to the right */
   transition: transform 0.3s ease-in-out;
   width: 100%;
-  z-index: 55;                            /* above header, below hamburger */
+  z-index: 55;
+  /* above header, below hamburger */
 }
 
 /* Mobile overlay (links): big tappable buttons */
@@ -140,7 +147,8 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: #fff;                /* ensure link text is white */
+  color: #fff;
+  /* ensure link text is white */
   display: block;
   max-width: 300px;
   padding: 18px 24px;
