@@ -285,6 +285,10 @@ footer {
   .about {
     grid-template-columns: 1fr
   }
+
+  .pill-group{
+    justify-content: center;
+  }
 }
 
 @media (max-width:560px) {
