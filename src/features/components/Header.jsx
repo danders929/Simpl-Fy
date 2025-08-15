@@ -1,10 +1,27 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import "./Header.css";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef(null);
 
   const toggleMenu = () => setMenuOpen((v) => !v);
+
+  // Measure header height once and on resize; offset page so content doesn't slide under it.
+  useLayoutEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+
+    const apply = () => {
+      const h = el.offsetHeight || 64;
+      document.documentElement.style.setProperty("--header-h", `${h}px`);
+      document.body.style.paddingTop = `${h}px`;
+    };
+
+    apply();
+    window.addEventListener("resize", apply);
+    return () => window.removeEventListener("resize", apply);
+  }, []);
 
   useEffect(() => {
     const htmlEl = document.documentElement;
@@ -52,9 +69,8 @@ export default function Header() {
     };
   }, [menuOpen]);
 
-
   return (
-    <header className="site-header">
+    <header ref={headerRef} className="site-header">
       <div className="container nav">
         <a className="brand" href="#top" aria-label="Simpl-FY home">
           <img src="/assets/simpLogoV1.png" alt="Simpl-FY logo" />
