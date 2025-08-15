@@ -118,7 +118,7 @@
 .mobile-nav-links {
   align-items: center;
   backdrop-filter: blur(10px);
-  background: rgba(15, 23, 42, 0.98);
+  background: rgba(15, 23, 42, 0.95);
   /* full-screen overlay color */
   color: #fff;
   /* default text color for overlay */
@@ -209,12 +209,15 @@
 
 /* Site header shell: sticky, translucent gradient, subtle bottom border */
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 70;
   backdrop-filter: saturate(140%) blur(10px);
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.6));
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  position: sticky;
-  top: 0;
-  z-index: 50;
+
 }
 
 /* ===========================================
@@ -230,4 +233,24 @@
   .nav-links {
     display: none;
   }
+}
+
+/* Fallback; will be updated at runtime below */
+:root { --header-h: 64px; }
+
+/* Keep header fixed and above the overlay */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100; /* higher than the overlay */
+}
+
+/* Prevent content from sliding under the fixed header */
+body { padding-top: var(--header-h); }
+
+/* Make the overlay start under the header */
+.mobile-nav-links {
+  top: var(--header-h);                 /* was: top: 0 */
+  height: calc(100dvh - var(--header-h)); /* dvh = mobile-safe viewport */
+  z-index: 90; /* below the header */
 }
