@@ -5,13 +5,13 @@ export default function CTA() {
       <div className="container">
         <div className="cta">
           <div>
-            <h3 style={{ margin: 0, fontSize: "clamp(20px,3vw,26px)" }}>Start small. Scale fast.</h3>
+            <h3 style={{ margin: 0, fontSize: "clamp(20px,3vw,26px)" }}>Scalable By Design</h3>
             <p style={{ margin: 0, color: "var(--muted)" }}>
-              Pilot with core capabilities at low cost. Upgrade when ready.
+              Deploy what you need now, with the flexibility to scale when required
             </p>
           </div>
-          <div style={{ textAlign: "right" }}>
-            <a href="#contact" className="btn primary">Request a consultation</a>
+          <div style={{ textAlign: "Center" }}>
+            <a href="#contact" className="btn primary">Let's Talk</a>
           </div>
         </div>
       </div>
