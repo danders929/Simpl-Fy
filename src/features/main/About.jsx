@@ -22,7 +22,7 @@ export default function About() {
           <h2>Built for Big Plans</h2>
           <p>From first deployment to full-scale operations, we deliver solutions that adapt to your needs.</p>
           <ul>
-            <li><strong>Defence &amp; C5ISR Teams:</strong> Streamlined, mission-ready systems that reduce complexity and operational overhead.</li>
+            <li><strong>Defense &amp; C5ISR Teams:</strong> Streamlined, mission-ready systems that reduce complexity and operational overhead.</li>
             <li><strong>Government &amp; Federal Agencies:</strong> Secure, compliant, and modular IT infrastructure designed for evolving mission demands.</li>
             <li><strong>Enterprise IT Leaders:</strong> Flexible, scalable solutions that grow with your organization—without the clutter.</li>
             <li><strong>Scalable IT Infrastructure Needs:</strong> Deploy what you need today and expand seamlessly as your mission grows.</li>
