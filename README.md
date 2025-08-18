@@ -2,7 +2,7 @@
 
 **Simpl-Fy** is a modern, mobile-responsive landing page built with [React](https://react.dev/) and [Vite](https://vitejs.dev/). This site showcases a sleek header with dynamic navigation, including a fullscreen mobile menu, and sets the foundation for an IT services brand site.
 
-![Simpl-Fy Screenshot](./public/assets/simpl-fy-logo-100x100.png)
+![Simpl-Fy Screenshot](./public/assets/Simplogov1.png)
 
 ---
 
