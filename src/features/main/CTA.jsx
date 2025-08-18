@@ -10,7 +10,7 @@ export default function CTA() {
               Deploy what you need now, with the flexibility to scale when required
             </p>
           </div>
-          <div style={{ textAlign: "Center" }}>
+          <div style={{ textAlign: "center" }}>
             <a href="#contact" className="btn primary">Let's Talk</a>
           </div>
         </div>
