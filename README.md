@@ -123,18 +123,6 @@ The initial roadmap items—implementing the About/Services/Contact sections, ad
 * **Testimonials or case studies** – Showcase customer success stories to build trust.
 * **Progressive Web App (PWA) features** – Enable offline support and “Add to Home Screen” on mobile devices.
 
-## Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/your-feature`)
-5. Open a pull request
-
-Please ensure your code adheres to the existing style and includes appropriate tests where applicable.
-
 ## License
 
 Distributed under the MIT License. See the [LICENSE](LICENSE) file for details.
