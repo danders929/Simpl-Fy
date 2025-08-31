@@ -123,10 +123,6 @@ The initial roadmap items—implementing the About/Services/Contact sections, ad
 * **Testimonials or case studies** – Showcase customer success stories to build trust.
 * **Progressive Web App (PWA) features** – Enable offline support and “Add to Home Screen” on mobile devices.
 
-## License
-
-Distributed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Contact
 
 Have questions or feedback? Feel free to open an issue on GitHub or reach out via the repository owner’s profile.
